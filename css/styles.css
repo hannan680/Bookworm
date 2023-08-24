@@ -57,7 +57,10 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
   height: 100vh;
-  padding: 100px;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .left-column {
@@ -66,6 +69,7 @@ header {
 
 .text-block:first-child {
   font-size: 36px;
+  align-self: center;
   /* margin-top: -150px; */
 }
 
@@ -227,14 +231,6 @@ footer {
   object-fit: cover;
 }
 
-/* ///////// */
-/* .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-} */
-
 .gallery {
   display: flex;
   gap: 20px;
@@ -252,53 +248,6 @@ footer {
   text-align: center;
   /* display: inline-block; */
 }
-
-/* //// */
-/* 
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-label {
-  font-weight: bold;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-.message {
-  color: green;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.error-message {
-  color: red;
-  font-weight: bold;
-  margin-top: 10px;
-} */
 
 .container {
   max-width: 800px;
@@ -441,4 +390,133 @@ button:hover {
 
 .menu-list a:hover {
   color: #f75454;
+}
+
+/* ////////// */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: middle; /* Align radio buttons and checkboxes properly */
+}
+
+/* Improved alignment for radio buttons and checkboxes */
+label[for="size-small"],
+label[for="size-medium"],
+label[for="color-red"],
+label[for="color-blue"] {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #4caf50;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Common styles for both radio and checkbox */
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.option input[type="radio"],
+.option input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.option label {
+  cursor: pointer;
+}
+
+/* Styling for radio buttons */
+.option input[type="radio"]:checked {
+  border-color: #007bff; /* Change color when selected */
+  background-color: #007bff; /* Optional: Add a background color */
+}
+
+/* Styling for checkboxes */
+.option input[type="checkbox"]:checked {
+  border-color: #28a745; /* Change color when selected */
+  background-color: #28a745; /* Optional: Add a background color */
 }

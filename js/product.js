@@ -28,15 +28,18 @@ $(document).ready(function () {
     deliveryFeeSummary.text(`Delivery Fee: $${deliveryFee.toFixed(2)}`);
     totalCostSummary.text(`Total Cost: $${totalCost.toFixed(2)}`);
 
-    deliverySection.show();
-    orderSummary.show();
+    // deliverySection.show();
+    // orderSummary.show();
   });
   $("#order-form").validate();
   $("#delivery-form").validate();
 
   $("#checkout-button").click(function () {
+    console.log($("#order-form").valid());
     if ($("#order-form").valid()) {
       $(".order-section").hide();
+      orderSummary.show();
+
       $(".delivery-section").show();
     }
   });
